@@ -70,17 +70,29 @@ $ cap production puma:start
 $ cap production puma:restart
 
 
-$ sudo service nginx restart
+
 
 
 ```
 
 * Rubocop
 ```bash
+$ rubocop
+$ rubocop --require rubocop-rails
+
+
 ```
 
 
 * ssh-key
+```bash
+$ ls -al ~/.ssh
+$ ls ~/.ssh/*.pub
+$ ssh-add -K ~/.ssh/id_rsa
+$ eval "$(ssh-agent -s)"
+
+$ pbcopy < ~/.ssh/id_rsa.pub
+```
 
 * Other
 ```bash
