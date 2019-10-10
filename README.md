@@ -46,15 +46,31 @@ $ rails g pundit:policy post
 $ rails g serializer post
 ```
 
-* Puma
+* Server/Puma
 ```bash
+$ ps aux | grep puma    # Get puma pid
+$ kill -s SIGUSR2 pid   # Restart puma
+$ kill -s SIGTERM pid   # Stop puma
+
+$ sudo service nginx start
 
 ```
 
 * Capistrano
 
 ```bash
-$ rails g serializer post
+$ cap production deploy:initial
+$ cap install cap install STAGES=production
+$ cap install
+$ cap production deploy
+$ cap production puma:status
+$ cap production puma:start
+$ cap production puma:restart
+
+
+$ sudo service nginx restart
+
+
 ```
 
 * Rubocop
@@ -62,7 +78,7 @@ $ rails g serializer post
 ```
 
 
-
+* ssh-key
 
 * Other
 ```bash
