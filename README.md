@@ -3,6 +3,8 @@
 
 
 ## Generate CMD
+
+```bash
 rails server -b 0.0.0.0
 rails s -e production
 
@@ -11,6 +13,8 @@ rails new bookRegistry -T
 rails new myapp --database=postgresql
 rake db:create 
 rails db:setup
+```
+
 
 
  bundle update
