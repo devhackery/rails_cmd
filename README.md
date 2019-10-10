@@ -33,6 +33,9 @@ $ rails db:setup
 $ rake db:migrate
 $ rake db:rollback STEP=1 
 $ rake db:migrate:down VERSION=20100905201547
+$ rails g model Post user:references body:text
+$ rails g migration CreateJoinTableUsersForums users forums
+
 ```
 
 
