@@ -2,7 +2,7 @@
 
 
 
-* Generate CMD
+* Generate
 ```bash
 rails new myapp -d mysql -T
 rails new myapp --database=postgresql 
@@ -13,14 +13,13 @@ rails g model YourModel --migration=false
 
 ```
 
-* Running CMD
+* Running 
 
 ```bash
 $ rails server -b 0.0.0.0
 $ rails s -e production -d
 $ redis-server
 $ sidekiq
-
 $ bundle exec sidekiq -C config/sidekiq.yml
 $ bundle exec sidekiq -d -L log/sidekiq.log -C config/sidekiq.yml -e production
 $ rubycritic    # provide a quality report of your Ruby code.
@@ -47,6 +46,11 @@ $ rails g pundit:policy post
 $ rails g serializer post
 ```
 
+* Puma
+```bash
+
+```
+
 * Capistrano
 
 ```bash
@@ -60,7 +64,7 @@ $ rails g serializer post
 
 
 
-
+* Other
 ```bash
  bundle update
  ```
