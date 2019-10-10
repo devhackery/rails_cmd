@@ -59,10 +59,12 @@ $ sudo service nginx start
 * Capistrano
 
 ```bash
+
 $ cap production deploy:initial
 $ cap install cap install STAGES=production
 $ cap install
 $ cap production deploy
+$ cap production deploy:check
 $ cap production puma:status
 $ cap production puma:start
 $ cap production puma:restart
