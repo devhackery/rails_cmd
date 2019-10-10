@@ -1,5 +1,8 @@
 # Rails CMD
 
+
+
+## Generate CMD
 rails server -b 0.0.0.0
 rails s -e production
 
