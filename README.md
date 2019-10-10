@@ -2,7 +2,7 @@
 
 
 
-## Generate CMD
+1.Generate CMD
 
 ```bash
 rails server -b 0.0.0.0
