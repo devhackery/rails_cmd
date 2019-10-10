@@ -2,60 +2,77 @@
 
 
 
-1.Generate CMD
+* Generate CMD
+```bash
+rails new myapp -d mysql -T
+rails new myapp --database=postgresql 
+rails generate controller foobar --skip-assets
+rails generate controller "api/v1/$1" --no_helper --no_assets
+rails generate controller foo bar --skip-template-engine
+rails g model YourModel --migration=false
+
+```
+
+* Running CMD
 
 ```bash
-rails server -b 0.0.0.0
-rails s -e production
+$ rails server -b 0.0.0.0
+$ rails s -e production -d
+$ redis-server
+$ sidekiq
 
-rails new bookRegistry -T
- rails new bees -d mysql
-rails new myapp --database=postgresql
-rake db:create 
-rails db:setup
+$ bundle exec sidekiq -C config/sidekiq.yml
+$ bundle exec sidekiq -d -L log/sidekiq.log -C config/sidekiq.yml -e production
+$ rubycritic    # provide a quality report of your Ruby code.
+```
+
+* Migration
+
+```bash
+$ rails db:create 
+$ rails db:setup
+$ rake db:migrate
+$ rake db:rollback STEP=1 
+$ rake db:migrate:down VERSION=20100905201547
+```
+
+
+* Pandit
+```bash
+$ rails g pundit:policy post
+```
+
+* Serializers
+```bash
+$ rails g serializer post
+```
+
+* Capistrano
+
+```bash
+$ rails g serializer post
+```
+
+* Rubocop
+```bash
 ```
 
 
 
+
+
+```bash
  bundle update
+ ```
 
 
- rails d scaffold apiClientApplication name:string client_id:string client_secret:string grant_type:string code:string redirect_uri:string site:string authorize_url:string token_url:string
 
 
-rake db:migrate
-
-rake db:rollback STEP=1 
-rake db:migrate:down VERSION=20100905201547
 
 
-rails generate controller foobar --skip-assets
-
-rails generate controller "api/v1/$1" --no_helper --no_assets
-
-rails generate controller foo bar --skip-template-engine
 
 
-rails g model YourModel --migration=false
-
-
-redis-server
-sidekiq
-
- bundle exec sidekiq -C config/sidekiq.yml
-
-bundle exec sidekiq -d -L log/sidekiq.log -C config/sidekiq.yml -e production
 
  
 
 
-
-
-
-
-(N+1 queries),
- gem 'bullet' 
-
-  gem "rubycritic", require: false
-
-cmd $ rubycritic    # provide a quality report of your Ruby code.
