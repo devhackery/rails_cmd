@@ -4,6 +4,7 @@
 
 * Generate
 ```bash
+rails new my_api --api -d postgresql -T
 rails new myapp -d mysql -T
 rails new myapp --database=postgresql 
 rails generate controller foobar --skip-assets
