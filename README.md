@@ -11,6 +11,7 @@ rails generate controller foobar --skip-assets
 rails generate controller "api/v1/$1" --no_helper --no_assets
 rails generate controller foo bar --skip-template-engine
 rails g model YourModel --migration=false
+rails g model admin --parent user
 
 ```
 
